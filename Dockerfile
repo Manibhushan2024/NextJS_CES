@@ -11,7 +11,8 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 
 # Install dependencies with optimizations
-RUN npm ci --omit=dev
+# Skip scripts to avoid husky prepare script (dev-only)
+RUN npm ci --omit=dev --ignore-scripts
 
 # --- Builder Stage ---
 FROM node:20-alpine AS builder
