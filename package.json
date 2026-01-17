@@ -15,7 +15,6 @@
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "type-check": "tsc --noEmit",
-    "prepare": "husky install",
     "setup:git-hooks": "husky install"
   },
   "dependencies": {
