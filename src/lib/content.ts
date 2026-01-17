@@ -4,10 +4,19 @@ import path from "path"
 export interface Product {
   slug: string
   name: string
+  title: string
   shortDesc: string
   imagePath: string
-  bullets: string[]
-  faq: Array<{ q: string; a: string }>
+  overview: string
+  specifications: Record<string, string>
+  features: string[]
+  benefits: string[]
+  applications: string[]
+  warranty: string
+  maintenance: string
+  bullets?: string[]
+  longDesc?: string
+  faq?: Array<{ q: string; a: string }>
 }
 
 export interface Service {
@@ -18,15 +27,29 @@ export interface Service {
   inclusions: string[]
   processSteps: string[]
   faq: Array<{ q: string; a: string }>
+  title?: string
+  overview?: string
+  highlights?: Array<{ icon: string; title: string; desc: string }>
+  specifications?: Record<string, string>
+  features?: string[]
+  benefits?: string[]
+  applications?: string[]
+  warranty?: string
+  maintenance?: string
 }
 
 export interface Project {
   slug: string
   title: string
   location: string
+  region: string
   type: string
+  year: string
+  status: string
   imagePath: string
   shortDesc: string
+  details: string
+  specifications: string
 }
 
 export interface Testimonial {

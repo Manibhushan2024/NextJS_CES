@@ -15,13 +15,13 @@ export function MobileStickyBar() {
           href="tel:+918285266082"
           className="flex-1 bg-blue-600 dark:bg-blue-700 text-white py-3 rounded-md font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition text-center"
         >
-           Call
+          Call
         </a>
         <button
           onClick={handleEnquiry}
           className="flex-1 bg-orange-500 dark:bg-orange-600 text-white py-3 rounded-md font-semibold hover:bg-orange-600 dark:hover:bg-orange-500 transition"
         >
-           Enquiry
+          Enquiry
         </button>
       </div>
     </div>

@@ -2,70 +2,345 @@
   {
     "slug": "passenger-elevators",
     "name": "Passenger Elevators",
-    "shortDesc": "Safe and reliable elevators for residential and commercial buildings",
-    "imagePath": "/images/services/passenger.jpg",
-    "bullets": [
-      "Capacity: 1000-2500 kg",
-      "Speed: Up to 4 m/s",
-      "Energy efficient LED lighting",
-      "Advanced safety features",
-      "Quiet operation"
+    "title": "Professional Passenger Elevator Systems",
+    "shortDesc": "Safe and comfortable elevators for residential and commercial buildings",
+    "imagePath": "/images/products/product-1.png",
+    "overview": "CastleElevator passenger elevators are engineered for comfort, safety, and efficiency. Perfect for residential apartments, office buildings, hotels, and shopping centers. Our systems feature advanced control technology, smooth acceleration, and exceptional reliability. Experience world-class elevator service with modern amenities and emergency backup systems.",
+    "specifications": {
+      "capacity": "1000-2500 kg (13-33 passengers)",
+      "speed": "Up to 4 m/s (smooth and safe)",
+      "floors": "Up to 30+ stories",
+      "doors": "Automatic sliding doors with safety sensors",
+      "car": "Modern stainless steel cabin design"
+    },
+    "features": [
+      "Advanced microprocessor control system",
+      "Smooth and quiet operation",
+      "Energy-efficient LED lighting",
+      "Emergency backup power system",
+      "Safety doors and barriers",
+      "Comfortable cabin with ventilation",
+      "Modern call buttons and displays",
+      "Maintenance-friendly design"
     ],
-    "faq": [
-      {
-        "q": "What is the standard capacity?",
-        "a": "Standard capacity ranges from 1000 kg to 2500 kg depending on the model."
-      },
-      {
-        "q": "How long is the warranty?",
-        "a": "All passenger elevators come with 5 years comprehensive warranty."
-      }
-    ]
+    "benefits": [
+      "Smooth and comfortable rides",
+      "Reliable daily operation",
+      "Energy efficient - saves on bills",
+      "Low maintenance requirements"
+    ],
+    "applications": [
+      "Residential apartments",
+      "Office buildings",
+      "Shopping malls",
+      "Hotels",
+      "Hospitals",
+      "Educational institutions",
+      "Government buildings",
+      "Corporate complexes"
+    ],
+    "warranty": "Comprehensive 5-year warranty covering all parts and labor with annual maintenance service included.",
+    "maintenance": "Professional maintenance teams available 24/7 for emergency support and preventive care. Quarterly inspections and annual overhauls included."
   },
   {
     "slug": "freight-elevators",
     "name": "Freight Elevators",
-    "shortDesc": "Heavy-duty elevators for industrial and commercial cargo transport",
-    "imagePath": "/images/services/freight.jpg",
-    "bullets": [
-      "Capacity: Up to 5000 kg",
-      "Reinforced steel construction",
-      "Durable non-slip flooring",
-      "Advanced load monitoring",
-      "Smooth acceleration"
+    "title": "Heavy-Duty Freight Elevator Systems",
+    "shortDesc": "Industrial-grade elevators for heavy loads and goods transportation",
+    "imagePath": "/images/products/product-2.png",
+    "overview": "CastleElevator freight elevators are built for demanding industrial environments. With capacities up to 5000 kg, they handle everything from factory goods to construction materials. Designed for continuous operation with reinforced steel construction and industrial-grade components. Perfect for factories, warehouses, shopping centers, and commercial complexes.",
+    "specifications": {
+      "capacity": "2500-5000 kg (heavy-duty design)",
+      "speed": "Up to 2.5 m/s (load-dependent)",
+      "floors": "Up to 20+ stories",
+      "doors": "Heavy-duty sliding or swing doors",
+      "car": "Reinforced steel with protective padding"
+    },
+    "features": [
+      "Heavy-duty reinforced construction",
+      "Industrial-grade motors",
+      "Protective bumpers and guards",
+      "Safety interlocks and sensors",
+      "Durable stainless steel finish",
+      "Advanced load monitoring system",
+      "Extended maintenance intervals",
+      "Customizable configurations"
     ],
-    "faq": [
-      {
-        "q": "What is the maximum load?",
-        "a": "Freight elevators can handle up to 5000 kg depending on design specifications."
-      },
-      {
-        "q": "Is maintenance included?",
-        "a": "Yes, preventive maintenance is included in our service packages."
-      }
-    ]
+    "benefits": [
+      "Handles heavy industrial loads",
+      "Maximum durability and reliability",
+      "Reduces manual labor significantly",
+      "Increases warehouse efficiency"
+    ],
+    "applications": [
+      "Factories and manufacturing",
+      "Warehouses and logistics",
+      "Construction sites",
+      "Shopping malls",
+      "Multi-story parking",
+      "Industrial parks",
+      "Food processing plants",
+      "Pharmaceutical facilities"
+    ],
+    "warranty": "Comprehensive 5-year warranty with quarterly maintenance and 24-hour support.",
+    "maintenance": "Industrial maintenance program with preventive care, regular inspections, and immediate emergency response available."
   },
   {
     "slug": "home-elevators",
     "name": "Home Elevators",
-    "shortDesc": "Compact and elegant elevators for residential properties",
-    "imagePath": "/images/services/home.jpg",
-    "bullets": [
-      "Capacity: 500-1000 kg",
-      "Space-saving design",
+    "title": "Residential Home Elevator Solutions",
+    "shortDesc": "Compact and stylish elevators for residential properties and luxury homes",
+    "imagePath": "/images/products/product-3.png",
+    "overview": "CastleElevator home elevators bring luxury and convenience to your residence. These compact, energy-efficient systems are designed to blend seamlessly with modern home architecture. Perfect for multi-story homes, villas, and luxury properties. Features whisper-quiet operation, elegant cabin designs, and advanced safety systems suitable for family use.",
+    "specifications": {
+      "capacity": "800-1200 kg (8-16 persons)",
+      "speed": "Up to 1.5 m/s (safe for homes)",
+      "floors": "Up to 10 stories",
+      "doors": "Automatic sliding doors with safety features",
+      "car": "Premium finishes with customizable designs"
+    },
+    "features": [
+      "Compact design fits tight spaces",
       "Whisper-quiet operation",
-      "Emergency power backup",
-      "Stylish finishes"
+      "Elegant interior finishes",
+      "Emergency backup power",
+      "Safety sensors throughout",
+      "Low power consumption",
+      "Modern cabin lighting",
+      "Customizable cabin designs"
     ],
-    "faq": [
-      {
-        "q": "Can it fit in small spaces?",
-        "a": "Yes, home elevators are designed to fit in spaces as small as 1.5m x 1.5m."
-      },
-      {
-        "q": "Is installation complicated?",
-        "a": "Our expert team handles the complete installation process seamlessly."
-      }
-    ]
+    "benefits": [
+      "Adds home value and luxury",
+      "Accessible for elderly and disabled",
+      "Convenient multi-story living",
+      "Premium aesthetic appeal"
+    ],
+    "applications": [
+      "Luxury villas",
+      "Multi-story bungalows",
+      "High-end apartments",
+      "Penthouses",
+      "Smart homes",
+      "Accessible living spaces",
+      "Healthcare facilities at home",
+      "Premium residential complexes"
+    ],
+    "warranty": "Comprehensive 5-year residential warranty with annual maintenance visits included.",
+    "maintenance": "Annual maintenance with quarterly optional service checks. 24/7 emergency support for residential customers."
+  },
+  {
+    "slug": "hospital-elevators",
+    "name": "Hospital Elevators",
+    "title": "Specialized Medical Elevator Solutions",
+    "shortDesc": "Specialized elevators for hospitals with stretcher and equipment transport capabilities",
+    "imagePath": "/images/products/hospital-elevator.png",
+    "overview": "CastleElevator hospital elevators are engineered specifically for medical environments. With wider cabins, reinforced safety features, and touch-free controls, they safely transport patients, medical equipment, and stretchers. Features antimicrobial surfaces, emergency backup systems, and 24/7 support for healthcare facilities.",
+    "specifications": {
+      "capacity": "1600-2000 kg (stretcher + equipment compatible)",
+      "speed": "Up to 2.5 m/s (smooth for patient comfort)",
+      "doors": "Automatic sliding doors with sensors (touch-free option)",
+      "width": "Wider cabin design for stretcher accessibility",
+      "safety": "Hospital-grade safety systems with backup power"
+    },
+    "features": [
+      "Antimicrobial stainless steel surfaces",
+      "Wide cabin for stretcher and equipment transport",
+      "Touch-free control systems available",
+      "Emergency backup power system",
+      "Advanced safety sensors",
+      "Quiet, smooth operation for patient comfort",
+      "Hospital-grade infection control design",
+      "24/7 emergency support line"
+    ],
+    "benefits": [
+      "Safe transport for patients and medical equipment",
+      "Reduces infection risk with antimicrobial design",
+      "Improves hospital workflow efficiency",
+      "Reliable operation for critical healthcare"
+    ],
+    "applications": [
+      "Multi-story hospitals",
+      "Medical centers and clinics",
+      "Diagnostic imaging centers",
+      "Surgical facilities",
+      "Emergency care facilities",
+      "Healthcare complexes",
+      "Medical research institutions",
+      "Rehabilitation centers"
+    ],
+    "warranty": "Comprehensive 5-year medical facility warranty with priority maintenance included.",
+    "maintenance": "Dedicated medical facility support with 24/7 emergency response and quarterly inspections standard."
+  },
+  {
+    "slug": "hydraulic-elevators",
+    "name": "Hydraulic Elevators",
+    "title": "Reliable Hydraulic Elevator Systems",
+    "shortDesc": "Durable hydraulic elevators for low to mid-rise buildings with superior reliability",
+    "imagePath": "/images/products/hydraulic-elevator.png",
+    "overview": "CastleElevator hydraulic elevators combine simplicity with reliability. Perfect for low to mid-rise buildings (up to 10 floors), these systems offer smooth operation, minimal maintenance, and cost-effectiveness. Ideal for residential apartments, office buildings, and commercial establishments. Features proven hydraulic technology with modern controls and emergency systems.",
+    "specifications": {
+      "capacity": "1000-2500 kg (13-33 passengers)",
+      "speed": "Up to 1 m/s (smooth and steady)",
+      "floors": "Up to 10 stories",
+      "power": "Efficient hydraulic pump system",
+      "installation": "Simple installation with minimal construction"
+    },
+    "features": [
+      "Proven hydraulic technology",
+      "Smooth, steady operation",
+      "Simple design for easy maintenance",
+      "Cost-effective solution",
+      "Automatic load compensation",
+      "Energy-efficient hydraulic pump",
+      "Advanced safety valves",
+      "Customizable cabin designs"
+    ],
+    "benefits": [
+      "Reliable and proven technology",
+      "Lower installation costs",
+      "Easy and economical maintenance",
+      "Suitable for older buildings"
+    ],
+    "applications": [
+      "Residential buildings",
+      "Small office buildings",
+      "Hotels and resorts",
+      "Shopping complexes",
+      "Medical clinics",
+      "Warehouse facilities",
+      "Light industrial buildings",
+      "Retrofit installations"
+    ],
+    "warranty": "5-year comprehensive warranty with quarterly maintenance included.",
+    "maintenance": "Simple hydraulic system maintenance with quarterly inspections and yearly overhauls."
+  },
+  {
+    "slug": "car-lifts",
+    "name": "Automatic Car Lifts",
+    "title": "Multi-Level Vehicle Parking Solutions",
+    "shortDesc": "Smart car lift systems for multi-level parking with automated controls and safety features",
+    "imagePath": "/images/products/car-lift.png",
+    "overview": "CastleElevator car lifts provide efficient multi-level vehicle parking solutions for commercial and residential complexes. With automated controls, advanced safety features, and space-efficient design, they maximize parking capacity in minimal space. Perfect for parking garages, hotels, shopping malls, and residential buildings. Features smooth operation, safety interlocks, and weather-resistant construction.",
+    "specifications": {
+      "capacity": "3000-5000 kg per vehicle (supports all car types)",
+      "platforms": "2-8 levels stackable configuration",
+      "operation": "Fully automated with remote/app control",
+      "space": "Up to 300% increase in parking capacity",
+      "power": "Low power consumption with backup systems"
+    },
+    "features": [
+      "Fully automated vehicle positioning",
+      "Mobile app control and monitoring",
+      "Advanced safety interlocks",
+      "Weather-resistant construction",
+      "Smooth hydraulic or electric operation",
+      "Customizable platform levels",
+      "Real-time system diagnostics",
+      "Emergency manual override system"
+    ],
+    "benefits": [
+      "Maximizes parking capacity efficiently",
+      "Reduces parking space requirements",
+      "Improves vehicle security",
+      "Automated operation reduces labor"
+    ],
+    "applications": [
+      "Parking garages",
+      "Shopping malls",
+      "Hotels and resorts",
+      "Residential complexes",
+      "Office buildings",
+      "Commercial establishments",
+      "Airports and transit hubs",
+      "Entertainment venues"
+    ],
+    "warranty": "5-year comprehensive warranty on all mechanical and electrical components.",
+    "maintenance": "Professional maintenance with quarterly inspections, annual overhauls, and 24/7 emergency support."
+  },
+  {
+    "slug": "escalators",
+    "name": "Modern Escalators",
+    "title": "High-Capacity Escalator Systems",
+    "shortDesc": "Heavy-duty escalators for shopping centers, airports, and transit stations",
+    "imagePath": "/images/products/product-4.png",
+    "overview": "CastleElevator escalators are engineered for continuous operation in high-traffic environments. With state-of-the-art safety systems and energy-efficient design, they handle thousands of passengers daily. Ideal for shopping centers, airports, train stations, hospitals, and entertainment venues. Features advanced control systems, automatic load balancing, and eco-friendly energy management.",
+    "specifications": {
+      "capacity": "Up to 24,000 passengers per hour",
+      "speed": "0.65 m/s (standard commercial)",
+      "angles": "30°, 35°, or customized",
+      "width": "600mm or 1000mm standard",
+      "material": "Aluminum and stainless steel construction"
+    },
+    "features": [
+      "Energy-efficient LED lighting",
+      "Advanced safety sensors",
+      "Variable speed control",
+      "Automatic load detection",
+      "Emergency stop systems",
+      "Low vibration technology",
+      "Intelligent maintenance alerts",
+      "Noise reduction design"
+    ],
+    "benefits": [
+      "Handles massive foot traffic",
+      "Energy-efficient operation",
+      "Minimal maintenance required",
+      "Environmentally friendly"
+    ],
+    "applications": [
+      "Shopping malls",
+      "International airports",
+      "Train and metro stations",
+      "Hospitals and clinics",
+      "Entertainment venues",
+      "Large office buildings",
+      "Convention centers",
+      "Public transportation hubs"
+    ],
+    "warranty": "5-year comprehensive warranty with quarterly maintenance and 24/7 support included.",
+    "maintenance": "Professional maintenance contracts with emergency response, preventive care, and automatic parts management."
+  },
+  {
+    "slug": "dumbwaiters",
+    "name": "Dumbwaiters",
+    "title": "Compact Dumbwaiter Service Systems",
+    "shortDesc": "Small-scale lifts for restaurants, hotels, offices, and residential use",
+    "imagePath": "/images/products/product-5.png",
+    "overview": "CastleElevator dumbwaiters are designed for efficient transportation of small goods, documents, and light materials between floors. Perfect for restaurants, hotels, hospitals, offices, and residential properties. Our compact systems require minimal space while offering maximum reliability. Features quiet operation, easy installation, and low maintenance requirements.",
+    "specifications": {
+      "capacity": "50-150 kg (small items and light goods)",
+      "size": "Compact dimensions (600mm x 700mm standard)",
+      "speed": "Up to 0.5 m/s",
+      "power": "Low power consumption - energy efficient",
+      "installation": "Easy installation with minimal structural changes"
+    },
+    "features": [
+      "Ultra-compact footprint",
+      "Whisper-quiet operation",
+      "Simple push-button controls",
+      "Safety door sensors",
+      "Stainless steel construction",
+      "Low maintenance design",
+      "Multiple cabin finishes",
+      "Emergency stop system"
+    ],
+    "benefits": [
+      "Saves space in buildings",
+      "Reduces manual labor",
+      "Cost-effective solution",
+      "Improves efficiency"
+    ],
+    "applications": [
+      "Restaurants and kitchens",
+      "Hotels and resorts",
+      "Office buildings",
+      "Hospitals and clinics",
+      "Libraries and archives",
+      "Luxury homes",
+      "Shopping malls",
+      "Multi-family apartments"
+    ],
+    "warranty": "5-year warranty covering all parts and service for residential use.",
+    "maintenance": "Annual maintenance with optional quarterly checks. Quick response emergency support available."
   }
 ]

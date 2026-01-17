@@ -1,7 +1,6 @@
- 
 "use client"
 
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useContext, useState, useEffect } from "react"
 
 type Theme = "light" | "dark"
 
@@ -12,39 +11,31 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-let themeInitialized = false
-
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light")
+  const [mounted, setMounted] = useState(false)
 
-  // Initialize theme on first render only
-  if (!themeInitialized && typeof window !== "undefined") {
-    // eslint-disable-next-line react-hooks/globals
-    themeInitialized = true
+  // Initialize theme on mount
+  useEffect(() => {
+    setMounted(true)
+    
+    // Get stored theme or system preference
     const stored = localStorage.getItem("theme") as Theme | null
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
     const initialTheme = stored || (prefersDark ? "dark" : "light")
-
-    const applyThemeLocal = (newTheme: Theme) => {
-      const html = document.documentElement
-      if (newTheme === "dark") {
-        html.classList.add("dark")
-      } else {
-        html.classList.remove("dark")
-      }
-      localStorage.setItem("theme", newTheme)
-    }
-
-    applyThemeLocal(initialTheme)
+    
     setTheme(initialTheme)
-  }
+    applyTheme(initialTheme)
+  }, [])
 
   const applyTheme = (newTheme: Theme) => {
     const html = document.documentElement
     if (newTheme === "dark") {
       html.classList.add("dark")
+      html.style.colorScheme = "dark"
     } else {
       html.classList.remove("dark")
+      html.style.colorScheme = "light"
     }
     localStorage.setItem("theme", newTheme)
   }
@@ -53,6 +44,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const newTheme = theme === "light" ? "dark" : "light"
     setTheme(newTheme)
     applyTheme(newTheme)
+  }
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <ThemeContext.Provider value={{ theme: "light", toggleTheme: () => {} }}>
+        {children}
+      </ThemeContext.Provider>
+    )
   }
 
   return (
