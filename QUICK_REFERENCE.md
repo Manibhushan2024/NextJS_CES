@@ -66,7 +66,7 @@ vercel
 | SMTP_PORT | 465 |
 | SMTP_SECURE | true |
 | SMTP_USER | support@castelelevator.com |
-| SMTP_PASS | Loma@123 |
+| SMTP_PASS | [REDACTED — rotate exposed credential] |
 | SMTP_FROM | support@castelelevator.com |
 
 **Then:** Deployments → Right-click latest → Redeploy
@@ -97,7 +97,7 @@ https://castleelevator.vercel.app
 ### Your Website Details
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465
 Provider: GoDaddy Titan
 Phone: +91 8285266082
@@ -286,7 +286,7 @@ Contains: Enquiry ID, thank you, contact info
 **Check here for enquiries:**
 ```
 support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 Provider: GoDaddy webmail
 ```
 

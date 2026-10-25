@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- Standalone Node CommonJS utility. */
 const fs = require('fs');
-const path = require('path');
 
 // Create a simple SVG placeholder function
 function createSVGPlaceholder(text, filename, width = 800, height = 600) {

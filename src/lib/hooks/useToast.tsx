@@ -1,19 +1,25 @@
 /**
  * Toast Notification System
  * Global state management for toast notifications (no page reload!)
- * 
+ *
  * Usage in any component:
  * import { useToast } from '@/lib/hooks/useToast'
- * 
+ *
  * const { addToast } = useToast()
  * addToast('Success message', 'success')
  */
 
-'use client'
+"use client"
 
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react'
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+} from "react"
 
-export type ToastType = 'success' | 'error' | 'loading' | 'info'
+export type ToastType = "success" | "error" | "loading" | "info"
 
 export interface Toast {
   id: string
@@ -33,10 +39,13 @@ const ToastContext = createContext<ToastContextType | undefined>(undefined)
 
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([])
+  const removeToast = useCallback((id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id))
+  }, [])
 
   const addToast = useCallback(
-    (message: string, type: ToastType = 'info', duration = 5000) => {
-      const id = Date.now().toString()
+    (message: string, type: ToastType = "info", duration = 5000) => {
+      const id = crypto.randomUUID()
       const toast: Toast = { id, message, type, duration }
 
       setToasts((prev) => [...prev, toast])
@@ -50,12 +59,8 @@ export function ToastProvider({ children }: { children: ReactNode }) {
 
       return id
     },
-    []
+    [removeToast]
   )
-
-  const removeToast = useCallback((id: string) => {
-    setToasts((prev) => prev.filter((t) => t.id !== id))
-  }, [])
 
   const clearAll = useCallback(() => {
     setToasts([])
@@ -71,7 +76,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
 export function useToast() {
   const context = useContext(ToastContext)
   if (!context) {
-    throw new Error('useToast must be used within ToastProvider')
+    throw new Error("useToast must be used within ToastProvider")
   }
   return context
 }

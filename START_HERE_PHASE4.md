@@ -54,7 +54,7 @@ Check **support@castelelevator.com** inbox:
 
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465 (SSL)
 Status: ✅ Configured in .env.local
 ```
@@ -114,7 +114,7 @@ SMTP_HOST=smtp.secureserver.net
 SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=support@castelelevator.com
-SMTP_PASS=Loma@123
+SMTP_PASS=[REDACTED — rotate exposed credential]
 SMTP_FROM=support@castelelevator.com
 RATE_LIMIT_REQUESTS=5
 RATE_LIMIT_WINDOW_MS=3600000
@@ -221,7 +221,7 @@ npm run format
 
 ### Email not sending?
 - Check `.env.local` for correct credentials
-- Verify SMTP_PASS is: `Loma@123`
+- Verify SMTP_PASS is: `[REDACTED — rotate exposed credential]`
 - Check console for error messages
 - Verify inbox (sometimes goes to spam)
 

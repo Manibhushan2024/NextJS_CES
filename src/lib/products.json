@@ -1,346 +1,371 @@
 [
   {
-    "slug": "passenger-elevators",
-    "name": "Passenger Elevators",
-    "title": "Professional Passenger Elevator Systems",
-    "shortDesc": "Safe and comfortable elevators for residential and commercial buildings",
-    "imagePath": "/images/products/product-1.png",
-    "overview": "CastleElevator passenger elevators are engineered for comfort, safety, and efficiency. Perfect for residential apartments, office buildings, hotels, and shopping centers. Our systems feature advanced control technology, smooth acceleration, and exceptional reliability. Experience world-class elevator service with modern amenities and emergency backup systems.",
+    "slug": "home-elevators",
+    "name": "Home Lifts",
+    "title": "Home Lifts for Villas, Duplexes & Independent Houses",
+    "shortDesc": "Compact, quiet home lifts for G+1 to G+4 homes — designed around your shaft, stairwell or open void.",
+    "imagePath": "/images/catalog/home-lift.webp",
+    "category": "Residential",
+    "keySpecs": ["250–1,000 kg", "Up to 1.5 m/s", "Up to 5 stops"],
+    "overview": "A home lift should feel like part of the architecture, not an add-on. We survey your home, recommend the right drive type (machine-room-less traction, hydraulic or screw-driven) and fit a cabin finish that matches your interiors. Ideal for elderly parents, wheelchair users and multi-level family homes in Delhi NCR.",
     "specifications": {
-      "capacity": "1000-2500 kg (13-33 passengers)",
-      "speed": "Up to 4 m/s (smooth and safe)",
-      "floors": "Up to 30+ stories",
-      "doors": "Automatic sliding doors with safety sensors",
-      "car": "Modern stainless steel cabin design"
+      "Capacity": "250 kg to 1,000 kg (3 to 13 persons). Most homes choose 3–6 persons (250–408 kg)",
+      "Speed": "0.15 m/s to 1.5 m/s depending on drive type and travel",
+      "Stops / floors": "Up to 5 stops (G+4)",
+      "Drive options": "MRL gearless traction, hydraulic, or screw / pit-less systems",
+      "Pit & headroom": "Shallow-pit and low-headroom options for existing homes",
+      "Cabin": "Glass, stainless steel, wood-laminate or custom finish",
+      "Doors": "Automatic telescopic or manual swing doors"
     },
     "features": [
-      "Advanced microprocessor control system",
-      "Smooth and quiet operation",
-      "Energy-efficient LED lighting",
-      "Emergency backup power system",
-      "Safety doors and barriers",
-      "Comfortable cabin with ventilation",
-      "Modern call buttons and displays",
-      "Maintenance-friendly design"
+      "Automatic rescue device (ARD) — lowers to the nearest floor during a power cut",
+      "Overload sensor and door safety curtain",
+      "Emergency alarm, intercom and battery-backed cabin light",
+      "Soft start / stop with VVVF drive for a smooth, quiet ride",
+      "Works in a new shaft, existing stairwell void or a glass/steel structure",
+      "Wheelchair-friendly cabin sizes available"
     ],
     "benefits": [
-      "Smooth and comfortable rides",
-      "Reliable daily operation",
-      "Energy efficient - saves on bills",
-      "Low maintenance requirements"
+      "Comfortable access to every floor for elderly family members",
+      "Adds lasting value to independent homes and villas",
+      "Low running cost on single-phase or three-phase supply",
+      "Designed to fit renovation as well as new construction"
     ],
     "applications": [
-      "Residential apartments",
-      "Office buildings",
-      "Shopping malls",
-      "Hotels",
-      "Hospitals",
-      "Educational institutions",
-      "Government buildings",
-      "Corporate complexes"
+      "Independent houses and builder floors",
+      "Villas and farmhouses",
+      "Duplex and penthouse apartments",
+      "Homes with elderly or differently-abled family members"
     ],
-    "warranty": "Comprehensive 5-year warranty covering all parts and labor with annual maintenance service included.",
-    "maintenance": "Professional maintenance teams available 24/7 for emergency support and preventive care. Quarterly inspections and annual overhauls included."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Annual maintenance (AMC) plans with scheduled preventive visits and breakdown support.",
+    "faq": [
+      {
+        "q": "Can a lift be added to my existing house?",
+        "a": "Usually yes. We check the space (stairwell void, courtyard, or an external glass structure), pit depth, headroom and power supply during a site survey and recommend the drive type that fits."
+      },
+      {
+        "q": "What happens during a power cut?",
+        "a": "Home lifts we recommend include an automatic rescue device that brings the cabin to the nearest floor and opens the doors."
+      },
+      {
+        "q": "How much space does a home lift need?",
+        "a": "Compact cabins start around 900 mm × 1,000 mm internal size. The exact shaft size depends on capacity, door type and drive, which we confirm after the survey."
+      }
+    ]
+  },
+  {
+    "slug": "passenger-elevators",
+    "name": "Passenger Lifts",
+    "title": "Passenger Lifts for Apartments, Offices & Commercial Buildings",
+    "shortDesc": "Smooth, energy-efficient passenger lifts from 4 to 33 persons for residential societies and commercial towers.",
+    "imagePath": "/images/catalog/passenger.webp",
+    "category": "Commercial",
+    "keySpecs": ["4–33 persons", "0.5–4.0 m/s", "MRL & machine-room"],
+    "overview": "Passenger lifts sized to your building's traffic, from a 4-person lift in a builder floor to high-speed lifts for commercial towers. We plan capacity, speed and number of cars from building height and occupancy, then install and maintain partner equipment.",
+    "specifications": {
+      "Capacity": "4 to 26 persons (272–1,768 kg) standard; up to 33 persons (2,500 kg) on request",
+      "Speed": "0.5 m/s to 4.0 m/s (1.0–1.75 m/s typical for residential towers)",
+      "Floors": "G+2 to high-rise, planned from traffic analysis",
+      "Drive": "Gearless traction with VVVF drive, machine-room-less (MRL) or with machine room",
+      "Doors": "Automatic centre-opening or telescopic doors with full-height light curtain",
+      "Cabin": "Stainless steel (hairline/mirror), glass or custom finishes"
+    },
+    "features": [
+      "Automatic rescue device for power failures",
+      "Overload protection and door safety curtain",
+      "Emergency alarm, intercom and cabin light",
+      "Group control for multiple lifts",
+      "Energy-saving LED lighting and standby mode",
+      "Fire-service and car-call options"
+    ],
+    "benefits": [
+      "Right-sized for your building's daily traffic",
+      "Lower energy bills with gearless VVVF drives",
+      "Comfortable, quiet rides",
+      "Planned maintenance keeps downtime low"
+    ],
+    "applications": [
+      "Residential societies and apartments",
+      "Offices and IT buildings",
+      "Hotels and guest houses",
+      "Shopping complexes",
+      "Schools and institutions"
+    ],
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Comprehensive (CMC) or non-comprehensive (AMC) maintenance plans with scheduled visits."
   },
   {
     "slug": "freight-elevators",
-    "name": "Freight Elevators",
-    "title": "Heavy-Duty Freight Elevator Systems",
-    "shortDesc": "Industrial-grade elevators for heavy loads and goods transportation",
-    "imagePath": "/images/products/product-2.png",
-    "overview": "CastleElevator freight elevators are built for demanding industrial environments. With capacities up to 5000 kg, they handle everything from factory goods to construction materials. Designed for continuous operation with reinforced steel construction and industrial-grade components. Perfect for factories, warehouses, shopping centers, and commercial complexes.",
+    "name": "Goods / Freight Lifts",
+    "title": "Goods & Freight Lifts for Warehouses, Factories & Showrooms",
+    "shortDesc": "Heavy-duty goods lifts from 500 kg to 5,000 kg for warehouses, factories, showrooms and commercial kitchens.",
+    "imagePath": "/images/catalog/freight.webp",
+    "category": "Industrial",
+    "keySpecs": ["500–5,000 kg", "Up to 2.5 m/s", "Traction / hydraulic"],
+    "overview": "Goods lifts built for pallets, trolleys and heavy materials. We size the platform, door type and drive to your load, loading method (hand pallet truck, forklift, trolley) and duty cycle.",
     "specifications": {
-      "capacity": "2500-5000 kg (heavy-duty design)",
-      "speed": "Up to 2.5 m/s (load-dependent)",
-      "floors": "Up to 20+ stories",
-      "doors": "Heavy-duty sliding or swing doors",
-      "car": "Reinforced steel with protective padding"
+      "Capacity": "500 kg to 5,000 kg standard; heavier capacities on engineering review",
+      "Speed": "0.25 m/s to 2.5 m/s (0.5–1.0 m/s typical for goods lifts)",
+      "Floors": "G+1 to multi-storey",
+      "Drive": "Traction or hydraulic depending on load and travel",
+      "Doors": "Manual collapsible, swing, or automatic side-opening doors",
+      "Cabin": "Mild steel or chequered-plate floor with protective buffers"
     },
     "features": [
-      "Heavy-duty reinforced construction",
-      "Industrial-grade motors",
-      "Protective bumpers and guards",
-      "Safety interlocks and sensors",
-      "Durable stainless steel finish",
-      "Advanced load monitoring system",
-      "Extended maintenance intervals",
-      "Customizable configurations"
+      "Reinforced car frame and chequered-plate flooring",
+      "Overload protection and safety gear",
+      "Door interlocks on every landing",
+      "Wide door openings for trolleys and pallets",
+      "Optional attendant-operated control"
     ],
     "benefits": [
-      "Handles heavy industrial loads",
-      "Maximum durability and reliability",
-      "Reduces manual labor significantly",
-      "Increases warehouse efficiency"
+      "Moves heavy loads safely between floors",
+      "Reduces manual handling and labour time",
+      "Built for frequent daily use",
+      "Configured to your loading method"
     ],
     "applications": [
-      "Factories and manufacturing",
-      "Warehouses and logistics",
-      "Construction sites",
-      "Shopping malls",
-      "Multi-story parking",
-      "Industrial parks",
-      "Food processing plants",
-      "Pharmaceutical facilities"
+      "Warehouses and godowns",
+      "Factories and workshops",
+      "Showrooms and retail stores",
+      "Hotels and commercial kitchens",
+      "Malls and back-of-house areas"
     ],
-    "warranty": "Comprehensive 5-year warranty with quarterly maintenance and 24-hour support.",
-    "maintenance": "Industrial maintenance program with preventive care, regular inspections, and immediate emergency response available."
-  },
-  {
-    "slug": "home-elevators",
-    "name": "Home Elevators",
-    "title": "Residential Home Elevator Solutions",
-    "shortDesc": "Compact and stylish elevators for residential properties and luxury homes",
-    "imagePath": "/images/products/product-3.png",
-    "overview": "CastleElevator home elevators bring luxury and convenience to your residence. These compact, energy-efficient systems are designed to blend seamlessly with modern home architecture. Perfect for multi-story homes, villas, and luxury properties. Features whisper-quiet operation, elegant cabin designs, and advanced safety systems suitable for family use.",
-    "specifications": {
-      "capacity": "800-1200 kg (8-16 persons)",
-      "speed": "Up to 1.5 m/s (safe for homes)",
-      "floors": "Up to 10 stories",
-      "doors": "Automatic sliding doors with safety features",
-      "car": "Premium finishes with customizable designs"
-    },
-    "features": [
-      "Compact design fits tight spaces",
-      "Whisper-quiet operation",
-      "Elegant interior finishes",
-      "Emergency backup power",
-      "Safety sensors throughout",
-      "Low power consumption",
-      "Modern cabin lighting",
-      "Customizable cabin designs"
-    ],
-    "benefits": [
-      "Adds home value and luxury",
-      "Accessible for elderly and disabled",
-      "Convenient multi-story living",
-      "Premium aesthetic appeal"
-    ],
-    "applications": [
-      "Luxury villas",
-      "Multi-story bungalows",
-      "High-end apartments",
-      "Penthouses",
-      "Smart homes",
-      "Accessible living spaces",
-      "Healthcare facilities at home",
-      "Premium residential complexes"
-    ],
-    "warranty": "Comprehensive 5-year residential warranty with annual maintenance visits included.",
-    "maintenance": "Annual maintenance with quarterly optional service checks. 24/7 emergency support for residential customers."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Preventive maintenance plans suited to heavy-duty use."
   },
   {
     "slug": "hospital-elevators",
-    "name": "Hospital Elevators",
-    "title": "Specialized Medical Elevator Solutions",
-    "shortDesc": "Specialized elevators for hospitals with stretcher and equipment transport capabilities",
-    "imagePath": "/images/products/hospital-elevator.png",
-    "overview": "CastleElevator hospital elevators are engineered specifically for medical environments. With wider cabins, reinforced safety features, and touch-free controls, they safely transport patients, medical equipment, and stretchers. Features antimicrobial surfaces, emergency backup systems, and 24/7 support for healthcare facilities.",
+    "name": "Hospital / Bed Lifts",
+    "title": "Hospital, Bed & Stretcher Lifts",
+    "shortDesc": "Deep cabins for beds, stretchers and medical equipment — from 1,275 kg bed lifts up to 5,000 kg.",
+    "imagePath": "/images/catalog/hospital.webp",
+    "category": "Healthcare",
+    "keySpecs": ["Up to 5,000 kg", "Up to 2.5 m/s", "Bed & stretcher"],
+    "overview": "Hospital lifts are planned around patient movement: deep cabins for beds and stretchers, smooth levelling and reliable doors. Suitable for nursing homes, clinics and multi-specialty hospitals.",
     "specifications": {
-      "capacity": "1600-2000 kg (stretcher + equipment compatible)",
-      "speed": "Up to 2.5 m/s (smooth for patient comfort)",
-      "doors": "Automatic sliding doors with sensors (touch-free option)",
-      "width": "Wider cabin design for stretcher accessibility",
-      "safety": "Hospital-grade safety systems with backup power"
+      "Capacity": "1,275 kg to 5,000 kg (standard bed lifts 1,600–2,500 kg)",
+      "Speed": "0.5 m/s to 2.5 m/s (1.0–1.75 m/s typical)",
+      "Cabin": "Deep cabin for bed + attendants; stainless steel interior",
+      "Doors": "Automatic telescopic doors with wide clear opening",
+      "Levelling": "Accurate levelling for smooth stretcher movement",
+      "Power backup": "Automatic rescue device; DG supply integration"
     },
     "features": [
-      "Antimicrobial stainless steel surfaces",
-      "Wide cabin for stretcher and equipment transport",
-      "Touch-free control systems available",
-      "Emergency backup power system",
-      "Advanced safety sensors",
-      "Quiet, smooth operation for patient comfort",
-      "Hospital-grade infection control design",
-      "24/7 emergency support line"
+      "Bed and stretcher-sized cabins",
+      "Accurate floor levelling",
+      "Easy-to-clean stainless steel interiors",
+      "Priority / hospital-service mode",
+      "Automatic rescue device",
+      "Door safety curtain"
     ],
     "benefits": [
-      "Safe transport for patients and medical equipment",
-      "Reduces infection risk with antimicrobial design",
-      "Improves hospital workflow efficiency",
-      "Reliable operation for critical healthcare"
+      "Safe movement of patients and equipment",
+      "Smooth, jerk-free ride for patients",
+      "Hygienic, easy-clean surfaces",
+      "Dependable daily operation"
     ],
     "applications": [
-      "Multi-story hospitals",
-      "Medical centers and clinics",
-      "Diagnostic imaging centers",
-      "Surgical facilities",
-      "Emergency care facilities",
-      "Healthcare complexes",
-      "Medical research institutions",
-      "Rehabilitation centers"
+      "Multi-specialty hospitals",
+      "Nursing homes",
+      "Diagnostic centres",
+      "Clinics and medical colleges"
     ],
-    "warranty": "Comprehensive 5-year medical facility warranty with priority maintenance included.",
-    "maintenance": "Dedicated medical facility support with 24/7 emergency response and quarterly inspections standard."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Priority maintenance plans for healthcare buildings."
   },
   {
     "slug": "hydraulic-elevators",
-    "name": "Hydraulic Elevators",
-    "title": "Reliable Hydraulic Elevator Systems",
-    "shortDesc": "Durable hydraulic elevators for low to mid-rise buildings with superior reliability",
-    "imagePath": "/images/products/hydraulic-elevator.png",
-    "overview": "CastleElevator hydraulic elevators combine simplicity with reliability. Perfect for low to mid-rise buildings (up to 10 floors), these systems offer smooth operation, minimal maintenance, and cost-effectiveness. Ideal for residential apartments, office buildings, and commercial establishments. Features proven hydraulic technology with modern controls and emergency systems.",
+    "name": "Hydraulic Lifts",
+    "title": "Hydraulic Lifts for Low-Rise Buildings",
+    "shortDesc": "Smooth hydraulic lifts up to 26 persons for low-rise buildings up to 5 floors — no machine room on top.",
+    "imagePath": "/images/catalog/hydraulic.webp",
+    "category": "Residential & Commercial",
+    "keySpecs": ["Up to 26 persons", "Up to 1.0 m/s", "Up to 5 floors"],
+    "overview": "Hydraulic lifts need no overhead machine room and place light loads on the building structure, which makes them a strong fit for low-rise buildings, retrofits and goods applications.",
     "specifications": {
-      "capacity": "1000-2500 kg (13-33 passengers)",
-      "speed": "Up to 1 m/s (smooth and steady)",
-      "floors": "Up to 10 stories",
-      "power": "Efficient hydraulic pump system",
-      "installation": "Simple installation with minimal construction"
+      "Capacity": "Up to 26 persons (1,768 kg) for passengers; goods versions on request",
+      "Speed": "0.15 m/s to 1.0 m/s (0.3–0.6 m/s typical)",
+      "Floors": "Up to 5 floors (G+4), about 15–18 m travel",
+      "Power unit": "Compact hydraulic power pack, can sit away from the shaft",
+      "Headroom": "Low overhead requirement",
+      "Doors": "Automatic or manual doors"
     },
     "features": [
-      "Proven hydraulic technology",
-      "Smooth, steady operation",
-      "Simple design for easy maintenance",
-      "Cost-effective solution",
-      "Automatic load compensation",
-      "Energy-efficient hydraulic pump",
-      "Advanced safety valves",
-      "Customizable cabin designs"
+      "No machine room above the shaft",
+      "Smooth start and stop",
+      "Lowering valve for power-failure rescue",
+      "Low structural load on the building",
+      "Suited to retrofits"
     ],
     "benefits": [
-      "Reliable and proven technology",
-      "Lower installation costs",
-      "Easy and economical maintenance",
-      "Suitable for older buildings"
+      "Good fit for existing low-rise buildings",
+      "Simple, serviceable design",
+      "Smooth ride quality",
+      "Flexible machine placement"
     ],
     "applications": [
-      "Residential buildings",
-      "Small office buildings",
-      "Hotels and resorts",
-      "Shopping complexes",
-      "Medical clinics",
-      "Warehouse facilities",
-      "Light industrial buildings",
-      "Retrofit installations"
+      "Independent houses and builder floors",
+      "Small offices and clinics",
+      "Showrooms",
+      "Goods handling up to 5 floors"
     ],
-    "warranty": "5-year comprehensive warranty with quarterly maintenance included.",
-    "maintenance": "Simple hydraulic system maintenance with quarterly inspections and yearly overhauls."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Scheduled maintenance including oil, valve and seal checks."
   },
   {
     "slug": "car-lifts",
     "name": "Automatic Car Lifts",
-    "title": "Multi-Level Vehicle Parking Solutions",
-    "shortDesc": "Smart car lift systems for multi-level parking with automated controls and safety features",
-    "imagePath": "/images/products/car-lift.png",
-    "overview": "CastleElevator car lifts provide efficient multi-level vehicle parking solutions for commercial and residential complexes. With automated controls, advanced safety features, and space-efficient design, they maximize parking capacity in minimal space. Perfect for parking garages, hotels, shopping malls, and residential buildings. Features smooth operation, safety interlocks, and weather-resistant construction.",
+    "title": "Automatic Car Lifts & Car Elevators",
+    "shortDesc": "Car lifts from 3,000 kg to 5,000 kg to move vehicles between basement, stilt and upper floors.",
+    "imagePath": "/images/catalog/car-lift.webp",
+    "category": "Parking",
+    "keySpecs": ["3,000–5,000 kg", "Sedans & SUVs", "Basement / stilt"],
+    "overview": "Car lifts move vehicles between basement, stilt and upper parking levels where a ramp is not possible. We plan platform size, travel and controls around your vehicles and site.",
     "specifications": {
-      "capacity": "3000-5000 kg per vehicle (supports all car types)",
-      "platforms": "2-8 levels stackable configuration",
-      "operation": "Fully automated with remote/app control",
-      "space": "Up to 300% increase in parking capacity",
-      "power": "Low power consumption with backup systems"
+      "Capacity": "3,000 kg to 5,000 kg",
+      "Platform": "Sized for sedans and SUVs; typically about 2.5 m × 5.5 m and above",
+      "Speed": "0.15 m/s to 0.5 m/s",
+      "Drive": "Hydraulic or traction",
+      "Control": "Automatic operation with call buttons / remote",
+      "Doors": "Automatic or manual rolling / swing doors"
     },
     "features": [
-      "Fully automated vehicle positioning",
-      "Mobile app control and monitoring",
-      "Advanced safety interlocks",
-      "Weather-resistant construction",
-      "Smooth hydraulic or electric operation",
-      "Customizable platform levels",
-      "Real-time system diagnostics",
-      "Emergency manual override system"
+      "Heavy-duty platform and guide rails",
+      "Vehicle position sensors",
+      "Door interlocks and safety gear",
+      "Emergency lowering",
+      "Traffic lights and parking guidance (optional)"
     ],
     "benefits": [
-      "Maximizes parking capacity efficiently",
-      "Reduces parking space requirements",
-      "Improves vehicle security",
-      "Automated operation reduces labor"
+      "Use basements and upper floors where ramps don't fit",
+      "Saves space compared to a ramp",
+      "Secure vehicle access",
+      "Simple to operate"
     ],
     "applications": [
-      "Parking garages",
-      "Shopping malls",
-      "Hotels and resorts",
-      "Residential complexes",
-      "Office buildings",
-      "Commercial establishments",
-      "Airports and transit hubs",
-      "Entertainment venues"
+      "Independent houses and villas",
+      "Showrooms and service centres",
+      "Commercial buildings",
+      "Residential societies"
     ],
-    "warranty": "5-year comprehensive warranty on all mechanical and electrical components.",
-    "maintenance": "Professional maintenance with quarterly inspections, annual overhauls, and 24/7 emergency support."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Preventive maintenance with platform, hydraulic and safety checks."
   },
   {
-    "slug": "escalators",
-    "name": "Modern Escalators",
-    "title": "High-Capacity Escalator Systems",
-    "shortDesc": "Heavy-duty escalators for shopping centers, airports, and transit stations",
-    "imagePath": "/images/products/product-4.png",
-    "overview": "CastleElevator escalators are engineered for continuous operation in high-traffic environments. With state-of-the-art safety systems and energy-efficient design, they handle thousands of passengers daily. Ideal for shopping centers, airports, train stations, hospitals, and entertainment venues. Features advanced control systems, automatic load balancing, and eco-friendly energy management.",
+    "slug": "kitchen-lifts",
+    "name": "Kitchen Lifts",
+    "title": "Kitchen Lifts for Restaurants, Hotels & Homes",
+    "shortDesc": "Stainless-steel kitchen lifts (food lifts) from 50 kg to 300 kg to move food, plates and trays between floors.",
+    "imagePath": "/images/catalog/kitchen-lift.webp",
+    "category": "Hospitality",
+    "keySpecs": ["50–300 kg", "Up to 0.5 m/s", "SS 304 cabin"],
+    "overview": "A kitchen lift (food lift) connects your kitchen to the dining area, banquet hall or rooftop so staff don't carry trays up and down stairs. Built in food-grade stainless steel with counter-height or floor-level loading.",
     "specifications": {
-      "capacity": "Up to 24,000 passengers per hour",
-      "speed": "0.65 m/s (standard commercial)",
-      "angles": "30°, 35°, or customized",
-      "width": "600mm or 1000mm standard",
-      "material": "Aluminum and stainless steel construction"
+      "Capacity": "50 kg to 300 kg (100–200 kg typical for restaurants)",
+      "Speed": "0.1 m/s to 0.5 m/s",
+      "Stops": "Up to 5–6 stops",
+      "Cabin": "SS 304 food-grade stainless steel, with optional shelves",
+      "Loading": "Counter-height (about 750 mm) or floor-level",
+      "Doors": "Vertical bi-parting, shutter or swing doors with interlocks"
     },
     "features": [
-      "Energy-efficient LED lighting",
-      "Advanced safety sensors",
-      "Variable speed control",
-      "Automatic load detection",
-      "Emergency stop systems",
-      "Low vibration technology",
-      "Intelligent maintenance alerts",
-      "Noise reduction design"
+      "Food-grade stainless steel cabin",
+      "Door interlocks — lift moves only when all doors are closed",
+      "Call-and-send buttons on every floor",
+      "Arrival buzzer and indicator",
+      "Compact footprint, minimal civil work"
     ],
     "benefits": [
-      "Handles massive foot traffic",
-      "Energy-efficient operation",
-      "Minimal maintenance required",
-      "Environmentally friendly"
+      "Faster service from kitchen to table",
+      "Fewer spills and staff injuries on stairs",
+      "Hygienic and easy to clean",
+      "Fits tight commercial kitchens"
     ],
     "applications": [
-      "Shopping malls",
-      "International airports",
-      "Train and metro stations",
-      "Hospitals and clinics",
-      "Entertainment venues",
-      "Large office buildings",
-      "Convention centers",
-      "Public transportation hubs"
+      "Restaurants and cafés",
+      "Hotels and banquet halls",
+      "Cloud kitchens",
+      "Large homes and farmhouses",
+      "Hospitals and canteens"
     ],
-    "warranty": "5-year comprehensive warranty with quarterly maintenance and 24/7 support included.",
-    "maintenance": "Professional maintenance contracts with emergency response, preventive care, and automatic parts management."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Preventive maintenance plans for daily commercial use."
   },
   {
     "slug": "dumbwaiters",
-    "name": "Dumbwaiters",
-    "title": "Compact Dumbwaiter Service Systems",
-    "shortDesc": "Small-scale lifts for restaurants, hotels, offices, and residential use",
-    "imagePath": "/images/products/product-5.png",
-    "overview": "CastleElevator dumbwaiters are designed for efficient transportation of small goods, documents, and light materials between floors. Perfect for restaurants, hotels, hospitals, offices, and residential properties. Our compact systems require minimal space while offering maximum reliability. Features quiet operation, easy installation, and low maintenance requirements.",
+    "name": "Dumbwaiters & Service Lifts",
+    "title": "Dumbwaiters & Material Service Lifts",
+    "shortDesc": "From compact 50 kg dumbwaiters to 5-ton material service lifts for documents, linen, goods and stock.",
+    "imagePath": "/images/catalog/dumbwaiter.webp",
+    "category": "Service",
+    "keySpecs": ["50 kg – 5 ton", "Up to 0.5 m/s", "Goods only"],
+    "overview": "Dumbwaiters and service lifts carry goods only — never people. Compact dumbwaiters move files, linen, food and small stock; heavier material service lifts handle cartons and stock up to 5 tons in warehouses, shops and factories.",
     "specifications": {
-      "capacity": "50-150 kg (small items and light goods)",
-      "size": "Compact dimensions (600mm x 700mm standard)",
-      "speed": "Up to 0.5 m/s",
-      "power": "Low power consumption - energy efficient",
-      "installation": "Easy installation with minimal structural changes"
+      "Capacity": "Dumbwaiters 50–300 kg; material service lifts up to 5,000 kg (5 ton)",
+      "Speed": "0.1 m/s to 0.5 m/s",
+      "Stops": "G+1 to multi-storey",
+      "Drive": "Traction, drum or hydraulic depending on load",
+      "Cabin": "Stainless steel or mild steel",
+      "Doors": "Shutter, bi-parting or swing doors with interlocks"
     },
     "features": [
-      "Ultra-compact footprint",
-      "Whisper-quiet operation",
-      "Simple push-button controls",
-      "Safety door sensors",
-      "Stainless steel construction",
-      "Low maintenance design",
-      "Multiple cabin finishes",
-      "Emergency stop system"
+      "Goods-only design with door interlocks",
+      "Call-and-send controls on each floor",
+      "Overload protection",
+      "Compact footprint",
+      "Custom cabin sizes"
     ],
     "benefits": [
-      "Saves space in buildings",
-      "Reduces manual labor",
-      "Cost-effective solution",
-      "Improves efficiency"
+      "Saves staff time and effort",
+      "Reduces stair-carrying injuries",
+      "Affordable alternative to a full goods lift",
+      "Scales from small items to heavy stock"
     ],
     "applications": [
-      "Restaurants and kitchens",
-      "Hotels and resorts",
-      "Office buildings",
-      "Hospitals and clinics",
-      "Libraries and archives",
-      "Luxury homes",
-      "Shopping malls",
-      "Multi-family apartments"
+      "Offices, banks and libraries (documents)",
+      "Hospitals (linen, pharmacy)",
+      "Shops and warehouses (stock)",
+      "Hotels and homes"
     ],
-    "warranty": "5-year warranty covering all parts and service for residential use.",
-    "maintenance": "Annual maintenance with optional quarterly checks. Quick response emergency support available."
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Preventive maintenance plans suited to usage."
+  },
+  {
+    "slug": "escalators",
+    "name": "Escalators",
+    "title": "Escalators for Malls & Commercial Spaces",
+    "shortDesc": "Commercial escalators for malls, metro-connected buildings and showrooms.",
+    "imagePath": "/images/catalog/escalator.webp",
+    "category": "Commercial",
+    "keySpecs": ["600–1,000 mm steps", "0.5–0.65 m/s", "30° / 35°"],
+    "overview": "Escalators for high-footfall commercial buildings, planned around rise, step width and expected traffic.",
+    "specifications": {
+      "Step width": "600 mm, 800 mm or 1,000 mm",
+      "Speed": "0.5 m/s to 0.65 m/s",
+      "Inclination": "30° or 35°",
+      "Theoretical capacity": "Up to about 9,000 persons per hour (1,000 mm at 0.5 m/s)",
+      "Balustrade": "Glass or stainless steel"
+    },
+    "features": [
+      "Comb-plate and skirt safety switches",
+      "Emergency stop buttons",
+      "Handrail speed monitoring",
+      "Automatic slow-down / standby"
+    ],
+    "benefits": [
+      "Moves large crowds continuously",
+      "Energy-saving standby mode",
+      "Improves footfall to upper floors"
+    ],
+    "applications": [
+      "Shopping malls",
+      "Showrooms",
+      "Metro-connected buildings",
+      "Hospitals and institutions"
+    ],
+    "warranty": "Warranty is provided as per the equipment manufacturer's terms and is written into your quotation before work starts.",
+    "maintenance": "Scheduled maintenance plans for continuous operation."
   }
 ]

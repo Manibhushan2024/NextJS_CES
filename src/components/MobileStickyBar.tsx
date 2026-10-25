@@ -1,29 +1,41 @@
 "use client"
 
-export function MobileStickyBar() {
-  const handleEnquiry = () => {
-    const contactSection = document.getElementById("contact-form")
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+import Link from "next/link"
+import { CallLink, WhatsAppLink } from "./ContactLinks"
+import { PhoneIcon, WhatsAppIcon } from "./icons"
 
+// Mobile: three thumb-reach actions. Desktop: a floating WhatsApp button.
+export function MobileStickyBar() {
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 z-50">
-      <div className="flex gap-2 p-3">
-        <a
-          href="tel:+918285266082"
-          className="flex-1 bg-blue-600 dark:bg-blue-700 text-white py-3 rounded-md font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition text-center"
-        >
-          Call
-        </a>
-        <button
-          onClick={handleEnquiry}
-          className="flex-1 bg-orange-500 dark:bg-orange-600 text-white py-3 rounded-md font-semibold hover:bg-orange-600 dark:hover:bg-orange-500 transition"
-        >
-          Enquiry
-        </button>
+    <>
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-paper/95 px-3 pb-[max(env(safe-area-inset-bottom),0.75rem)] pt-3 backdrop-blur md:hidden">
+        <div className="grid grid-cols-3 gap-2 text-sm font-semibold">
+          <CallLink
+            source="sticky_mobile"
+            className="flex items-center justify-center gap-1.5 rounded-full border border-line py-3"
+          >
+            <PhoneIcon className="h-4 w-4" /> Call
+          </CallLink>
+          <WhatsAppLink
+            source="sticky_mobile"
+            className="flex items-center justify-center gap-1.5 rounded-full bg-whatsapp py-3 text-white"
+          >
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp
+          </WhatsAppLink>
+          <Link
+            href="/contact#quote"
+            className="flex items-center justify-center rounded-full bg-copper py-3 text-white"
+          >
+            Get quote
+          </Link>
+        </div>
       </div>
-    </div>
+      <WhatsAppLink
+        source="float_desktop"
+        className="fixed bottom-6 right-6 z-50 hidden items-center gap-2 rounded-full bg-whatsapp px-5 py-3.5 font-semibold text-white shadow-xl hover:brightness-110 md:flex"
+      >
+        <WhatsAppIcon className="h-6 w-6" /> Chat on WhatsApp
+      </WhatsAppLink>
+    </>
   )
 }

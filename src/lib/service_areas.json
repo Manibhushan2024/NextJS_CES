@@ -1,26 +1,29 @@
 [
   {
-    "name": "Bangalore",
-    "shortDesc": "Serving IT corridors and residential zones with expert elevator solutions"
+    "id": 1,
+    "name": "Delhi",
+    "emoji": "🏙️",
+    "shortDesc": "Home lift installation and lift services in Delhi",
+    "description": "Site assessment, partner-equipment installation and lift services in Delhi",
+    "cities": ["Delhi"],
+    "coverage": "Confirm site coverage and equipment eligibility with our team"
   },
   {
-    "name": "Delhi NCR",
-    "shortDesc": "Comprehensive coverage across Delhi, Noida, and Gurgaon"
+    "id": 2,
+    "name": "Gurugram (Gurgaon)",
+    "emoji": "🏢",
+    "shortDesc": "Lift installation and servicing in Gurugram",
+    "description": "Survey-led installation and lift services in Gurugram, Haryana",
+    "cities": ["Gurugram (Gurgaon)"],
+    "coverage": "Confirm site coverage and equipment eligibility with our team"
   },
   {
-    "name": "Mumbai",
-    "shortDesc": "High-rise solutions for commercial and residential developments"
-  },
-  {
-    "name": "Pune",
-    "shortDesc": "Supporting IT parks and premium residential communities"
-  },
-  {
-    "name": "Hyderabad",
-    "shortDesc": "Modern elevator services for growing commercial sector"
-  },
-  {
-    "name": "Chennai",
-    "shortDesc": "Reliable installation and maintenance services"
+    "id": 3,
+    "name": "Noida",
+    "emoji": "📍",
+    "shortDesc": "Lift installation and eligible maintenance services in Noida",
+    "description": "Site assessment, installation and eligible lift services in Noida, Uttar Pradesh",
+    "cities": ["Noida"],
+    "coverage": "Confirm site coverage, service authorization and equipment eligibility"
   }
 ]

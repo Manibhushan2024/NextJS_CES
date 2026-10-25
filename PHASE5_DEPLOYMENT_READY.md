@@ -146,7 +146,7 @@ Beautiful Website! 🎨
 ```
 Provider: GoDaddy Titan
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465
 Status: Ready
 ```
@@ -157,7 +157,7 @@ SMTP_HOST = smtp.secureserver.net
 SMTP_PORT = 465
 SMTP_SECURE = true
 SMTP_USER = support@castelelevator.com
-SMTP_PASS = Loma@123
+SMTP_PASS = [REDACTED — rotate exposed credential]
 SMTP_FROM = support@castelelevator.com
 ```
 

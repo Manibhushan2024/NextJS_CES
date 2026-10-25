@@ -18,7 +18,7 @@
   - [x] SMTP_PORT=465
   - [x] SMTP_SECURE=true
   - [x] SMTP_USER=support@castelelevator.com
-  - [x] SMTP_PASS=Loma@123
+  - [x] SMTP_PASS=[REDACTED — rotate exposed credential]
   - [x] SMTP_FROM=support@castelelevator.com
 
 - [x] `package.json` has dependencies:
@@ -128,7 +128,7 @@ vercel
 | SMTP_PORT | 465 |
 | SMTP_SECURE | true |
 | SMTP_USER | support@castelelevator.com |
-| SMTP_PASS | Loma@123 |
+| SMTP_PASS | [REDACTED — rotate exposed credential] |
 | SMTP_FROM | support@castelelevator.com |
 
 3. [ ] Save changes

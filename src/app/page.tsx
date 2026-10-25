@@ -1,391 +1,458 @@
 import Link from "next/link"
 import Image from "next/image"
-import { HeroCarousel } from "@/components/HeroCarousel"
-import { getProducts, getServices, getTestimonials } from "@/lib/content"
+import { getProducts } from "@/lib/content"
+import { SITE } from "@/lib/site"
+import { QuickQuoteForm } from "@/components/QuickQuoteForm"
+import { CallLink, WhatsAppLink } from "@/components/ContactLinks"
+import { ArrowIcon, CheckIcon } from "@/components/icons"
+
+const STEPS = [
+  {
+    title: "Tell us your need",
+    text: "Call, WhatsApp or fill the 30-second form. Share photos of the space if you have them.",
+  },
+  {
+    title: "Free site survey",
+    text: "An engineer measures the shaft or space, pit, headroom, power supply and access.",
+  },
+  {
+    title: "Written quotation",
+    text: "You get the recommended lift, cabin options, timeline and price in writing — before any work starts.",
+  },
+  {
+    title: "Installation & handover",
+    text: "Installation, load and safety testing, then a walkthrough of how to use and care for your lift.",
+  },
+  {
+    title: "AMC & breakdown support",
+    text: "Scheduled maintenance visits and a direct line for breakdowns keep your lift running.",
+  },
+]
+
+const FAQS = [
+  {
+    q: "How much does a lift cost in Delhi NCR?",
+    a: "Price depends on lift type, capacity, number of floors, drive type, doors and cabin finish. A compact home lift costs far less than a 13-person passenger lift. We give an exact written quotation after a free site survey, so you only pay for what your building needs.",
+  },
+  {
+    q: "Can you install a lift in my existing house?",
+    a: "In most homes, yes. We check stairwell voids, courtyards or an external glass/steel structure, along with pit depth, headroom and power supply, and recommend a lift that fits.",
+  },
+  {
+    q: "How long does installation take?",
+    a: "Once the shaft or structure is ready and equipment is delivered, a home lift typically takes a few weeks to install and test. Your quotation includes a timeline for your specific site.",
+  },
+  {
+    q: "Do you service lifts installed by other companies?",
+    a: "Yes, we take up repair, AMC and modernization for many existing lifts after an inspection confirms the equipment and spare-parts availability.",
+  },
+  {
+    q: "Which areas do you cover?",
+    a: "Delhi, Gurugram (Gurgaon) and Noida. Share your locality and we'll confirm coverage and survey timing.",
+  },
+  {
+    q: "What safety features do your lifts include?",
+    a: "Typical configurations include an automatic rescue device for power cuts, overload sensors, door safety curtains or interlocks, emergency alarm and intercom. Exact features depend on the model and are listed in your quotation.",
+  },
+]
 
 export default function Home() {
   const products = getProducts()
-  const services = getServices()
-  const testimonials = getTestimonials()
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  }
 
   return (
-    <div>
-      <section className="py-8 md:py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <HeroCarousel />
+    <div className="bg-paper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-[#17130f]">
+        <Image
+          src="/images/editorial/home-lift-hero.webp"
+          alt="Glass and bronze home lift beside a staircase in a modern Indian home"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17130f]/95 via-[#17130f]/70 to-[#17130f]/10" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 md:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
+          <div className="text-white">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-[#4ade80]" />
+              Serving {SITE.cities.join(" · ")}
+            </p>
+            <h1 className="max-w-2xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+              Home lifts &amp; elevators, installed right and kept running.
+            </h1>
+            <p className="mt-5 max-w-xl text-lg text-white/80">
+              Home, passenger, goods, hospital, hydraulic, car and kitchen
+              lifts. Free site survey, written quotation, installation and AMC
+              from one local team.
+            </p>
+            <ul className="mt-6 grid max-w-xl gap-2.5 text-white/90 sm:grid-cols-2">
+              {[
+                "Free site survey by an engineer",
+                "Clear written quotation, no surprises",
+                "Lifts for G+1 up to high-rise",
+                "AMC, repair & modernization",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <CheckIcon className="h-5 w-5 shrink-0 text-[#e9a272]" />{" "}
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <WhatsAppLink
+                source="hero"
+                className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 font-semibold text-white hover:brightness-110"
+              />
+              <CallLink
+                source="hero"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3.5 font-semibold text-white hover:bg-white/10"
+              />
+            </div>
+          </div>
+          <div id="quote" className="scroll-mt-24">
+            <QuickQuoteForm source="home_hero" />
+          </div>
         </div>
       </section>
 
-      {/* 📝 ADDED: About Section on Homepage */}
-      <section className="py-16 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* About Content */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-                About CastleElevator
-              </h2>
-              
-              <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg leading-relaxed">
-                With over 10 years of excellence in vertical transportation, CastleElevator has become India's most trusted name in elevator solutions. We specialize in providing safe, reliable, and modern elevator systems for residential, commercial, and industrial buildings.
+      {/* Quick facts strip */}
+      <section className="border-b border-line bg-ivory">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px px-4 py-6 text-center md:grid-cols-4">
+          {[
+            ["9 lift types", "Home to 5-ton goods"],
+            ["Up to 4 m/s", "Passenger lift speeds"],
+            ["3 cities", "Delhi · Gurugram · Noida"],
+            ["Free", "Site survey & quote"],
+          ].map(([big, small]) => (
+            <div key={big} className="px-2 py-2">
+              <p className="text-2xl font-semibold text-copper md:text-3xl">
+                {big}
               </p>
-              
-              <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg leading-relaxed">
-                Our team of 50+ certified engineers and technicians is dedicated to delivering excellence in every project. We have successfully installed and maintained elevators in 500+ buildings, serving millions of people daily across Delhi, UP, Punjab, Jammu, Haryana, and Madhya Pradesh.
-              </p>
-              
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
-                At CastleElevator, we are committed to the highest safety standards, innovative technology, and exceptional customer service. Whether it's a new installation, routine maintenance, or emergency support, we ensure your elevators run smoothly 24/7.
-              </p>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-blue-50 dark:bg-gray-800 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">500+</div>
-                  <p className="text-gray-600 dark:text-gray-400">Buildings Served</p>
-                </div>
-                <div className="bg-blue-50 dark:bg-gray-800 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">10+</div>
-                  <p className="text-gray-600 dark:text-gray-400">Years Experience</p>
-                </div>
-                <div className="bg-blue-50 dark:bg-gray-800 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
-                  <p className="text-gray-600 dark:text-gray-400">Team Members</p>
-                </div>
-                <div className="bg-blue-50 dark:bg-gray-800 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">24/7</div>
-                  <p className="text-gray-600 dark:text-gray-400">Support Available</p>
-                </div>
-              </div>
-
-              <Link
-                href="/about"
-                className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition-colors"
-              >
-                Learn More About Us
-              </Link>
+              <p className="text-sm text-muted">{small}</p>
             </div>
+          ))}
+        </div>
+      </section>
 
-            {/* About Image */}
-            <div className="h-96 rounded-lg shadow-lg overflow-hidden">
-              <Image
-                src="/images/about/about-company.png"
-                alt="CastleElevator Team"
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
+      {/* Products */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-copper">
+                Choose your lift
+              </p>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+                A lift for every building
+              </h2>
+              <p className="mt-3 max-w-2xl text-muted">
+                Capacities and speeds below are the ranges we supply. Your
+                engineer confirms the right size after the survey.
+              </p>
+            </div>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-1.5 font-semibold text-copper hover:gap-2.5"
+            >
+              Compare all lifts <ArrowIcon />
+            </Link>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {products.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/products/${p.slug}`}
+                className="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-ivory">
+                  <Image
+                    src={p.imagePath}
+                    alt={p.name}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  {p.category && (
+                    <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-1 text-xs font-semibold text-ink">
+                      {p.category}
+                    </span>
+                  )}
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold">{p.name}</h3>
+                  <p className="mt-1.5 line-clamp-2 text-sm text-muted">
+                    {p.shortDesc}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {p.keySpecs?.map((s) => (
+                      <span
+                        key={s}
+                        className="rounded-full bg-ivory px-2.5 py-1 text-xs font-medium"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-copper">
+                    Specs &amp; quote <ArrowIcon />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Home lift feature */}
+      <section className="bg-ivory py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+            <Image
+              src="/images/editorial/home-lift-detail.webp"
+              alt="Bronze-finish home lift entrance with stone wall cladding"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-copper">
+              Home lifts
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+              Every floor of your home, easy for every generation
+            </h2>
+            <p className="mt-4 text-muted">
+              Designed for independent houses, builder floors, villas and
+              duplexes. Fits a new shaft, an existing stairwell void or a glass
+              structure outside the house.
+            </p>
+            <dl className="mt-6 grid grid-cols-2 gap-4">
+              {[
+                ["Capacity", "250–1,000 kg"],
+                ["Speed", "Up to 1.5 m/s"],
+                ["Stops", "Up to 5 (G+4)"],
+                ["Power cut", "Auto rescue to nearest floor"],
+              ].map(([k, v]) => (
+                <div
+                  key={k}
+                  className="rounded-2xl border border-line bg-paper p-4"
+                >
+                  <dt className="text-xs uppercase tracking-wider text-muted">
+                    {k}
+                  </dt>
+                  <dd className="mt-1 font-semibold">{v}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="/products/home-elevators"
+                className="rounded-full bg-ink px-6 py-3.5 font-semibold text-paper hover:opacity-90"
+              >
+                Explore home lifts
+              </Link>
+              <WhatsAppLink
+                source="home_lift_section"
+                text="Hi Castle Elevator, I want a home lift. Can you arrange a free site survey?"
+                className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3.5 font-semibold hover:border-whatsapp"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* 📝 ADDED: Section Description */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Our Services</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              From installation to maintenance, we offer comprehensive elevator solutions tailored to your building's needs. Our services ensure maximum uptime and safety for your property.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition overflow-hidden cursor-pointer group"
-              >
-                <div className="relative h-48 w-full overflow-hidden bg-gray-200">
-                  <Image
-                    src={`/images/services/service-${index + 1}.png`}
-                    alt={service.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {service.shortDesc}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* 📝 ADDED: Section Description */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Our Products</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              CastleElevator offers a wide range of premium elevator products designed for modern buildings. Each product is engineered for safety, efficiency, and reliability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((product, index) => {
-              const productIcons: Record<string, string> = {
-                "passenger-elevators": "🛗",
-                "freight-elevators": "📦",
-                "home-elevators": "🏠",
-                "hospital-elevators": "🏥",
-                "hydraulic-elevators": "⚙️",
-                "modern-escalators": "📶",
-                "dumbwaiters": "🍽️",
-                "automatic-car-lifts": "🚗",
-              }
-              const gradients = [
-                "from-blue-500 to-blue-700",
-                "from-emerald-500 to-emerald-700",
-                "from-purple-500 to-purple-700",
-                "from-orange-500 to-orange-700",
-                "from-cyan-500 to-cyan-700",
-                "from-pink-500 to-pink-700",
-                "from-amber-500 to-amber-700",
-                "from-indigo-500 to-indigo-700",
-              ]
-              const icon = productIcons[product.slug] || "🛗"
-              const gradient = gradients[index % gradients.length]
-              
-              return (
-                <Link
-                  key={product.slug}
-                  href={`/products/${product.slug}`}
-                  className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:-translate-y-2"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {/* Gradient Background with Icon */}
-                  <div className={`relative h-44 w-full bg-gradient-to-br ${gradient} flex items-center justify-center overflow-hidden`}>
-                    {/* Animated Background Pattern */}
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="absolute top-4 left-4 w-20 h-20 border-2 border-white rounded-full animate-pulse"></div>
-                      <div className="absolute bottom-4 right-4 w-16 h-16 border-2 border-white rounded-lg rotate-45 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white rounded-full opacity-30"></div>
-                    </div>
-                    
-                    {/* Large Icon */}
-                    <span className="text-6xl transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 drop-shadow-lg z-10">
-                      {icon}
-                    </span>
-                    
-                    {/* Shimmer Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-5">
-                    <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {product.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
-                      {product.shortDesc}
-                    </p>
-                    
-                    {/* View More Arrow */}
-                    <div className="mt-3 flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
-                      <span>View Details</span>
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  {/* Bottom Accent Line */}
-                  <div className={`h-1 bg-gradient-to-r ${gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* 📝 ADDED: Section Description */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Why Choose CastleElevator?</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              With industry certifications, experienced engineers, and proven track record, we're the most trusted elevator partner in North India.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: "🏆",
-                title: "Industry Certified",
-                desc: "All engineers certified and trained to highest standards",
-              },
-              {
-                icon: "🚨",
-                title: "24/7 Emergency Support",
-                desc: "Always available for urgent repairs and emergencies",
-              },
-              {
-                icon: "⏰",
-                title: "10+ Years Trusted",
-                desc: "Serving 500+ buildings with proven excellence",
-              },
-              {
-                icon: "🛡️",
-                title: "Safety First",
-                desc: "Highest safety standards and compliance guaranteed",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white dark:bg-gray-800 rounded-lg p-6 text-center shadow-lg"
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* 📝 ADDED: Section Description */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Client Reviews & Testimonials</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Don't just take our word for it - hear what our satisfied clients across North India have to say about CastleElevator.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.slice(0, 4).map((testimonial, i) => (
-              <div
-                key={i}
-                className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.initials}
-                  </div>
-                  <div className="ml-4">
-                    <p className="font-bold text-gray-900 dark:text-white">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {testimonial.location}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 italic">
-                  &#34;{testimonial.review}&#34;
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              Find answers to common questions about our elevator services
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <details className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer group shadow-md">
-              <summary className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
-                <span>How often should I maintain my elevator?</span>
-                <span className="text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                We recommend monthly preventive maintenance for optimal performance and safety. This ensures early detection of potential issues and extends the lifespan of your elevator system.
-              </p>
-            </details>
-
-            <details className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer group shadow-md">
-              <summary className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
-                <span>What is your emergency response time?</span>
-                <span className="text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                Our emergency team responds within 2 hours in most areas. We provide 24/7 support with immediate phone guidance and rapid technician dispatch for critical situations.
-              </p>
-            </details>
-
-            <details className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer group shadow-md">
-              <summary className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
-                <span>Do you offer installation services?</span>
-                <span className="text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                Yes! We provide complete elevator installation services with professional engineering, all necessary certifications, compliance checks, and comprehensive training for your staff.
-              </p>
-            </details>
-
-            <details className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer group shadow-md">
-              <summary className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
-                <span>What service areas do you cover?</span>
-                <span className="text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                We serve Delhi, UP, Punjab, Jammu, Haryana, and Madhya Pradesh with professional installation, maintenance, and emergency support services.
-              </p>
-            </details>
-
-            <details className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer group shadow-md">
-              <summary className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
-                <span>What warranty do you provide?</span>
-                <span className="text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                We provide comprehensive 5-year warranties on installations covering all parts and labor. Maintenance contracts include safety compliance guarantees and annual maintenance included.
-              </p>
-            </details>
-
-            <details className="bg-white dark:bg-gray-800 rounded-lg p-6 cursor-pointer group shadow-md">
-              <summary className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
-                <span>Can you modernize my existing elevator?</span>
-                <span className="text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                Absolutely! Our modernization services upgrade outdated systems with modern technology, improved safety features, energy efficiency improvements, and reduced maintenance requirements.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-linear-to-r from-blue-600 to-blue-800 dark:from-blue-800 dark:to-blue-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Ready to Elevate Your Building?
-          </h2>
-          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Join 500+ satisfied clients across North India who trust CastleElevator for their vertical transportation needs. Get a free consultation from our expert team today.
+      {/* Process */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <p className="text-sm font-semibold uppercase tracking-wider text-copper">
+            How it works
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+918285266082"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition inline-block"
-            >
-              📞 Call +91 8285266082
-            </a>
-            <Link
-              href="/contact"
-              className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-8 rounded-lg transition inline-block"
-            >
-              💬 Get Free Consultation
-            </Link>
+          <h2 className="mt-2 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+            From first call to a running lift — in five clear steps
+          </h2>
+          <ol className="mt-10 grid gap-4 md:grid-cols-5">
+            {STEPS.map((step, i) => (
+              <li
+                key={step.title}
+                className="rounded-3xl border border-line p-5"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-copper text-sm font-bold text-white">
+                  {i + 1}
+                </span>
+                <h3 className="mt-4 font-semibold">{step.title}</h3>
+                <p className="mt-1.5 text-sm text-muted">{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Service for existing lifts */}
+      <section className="bg-ink py-16 text-paper md:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-copper">
+              Already have a lift?
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+              Repair, AMC and modernization
+            </h2>
+            <p className="mt-4 opacity-75">
+              Frequent breakdowns, jerky rides or old controllers? We inspect,
+              repair and maintain lifts, and upgrade old ones with new
+              controllers, doors, cabins and rescue devices.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                ["AMC", "/services/amc", "Scheduled preventive maintenance"],
+                ["CMC", "/services/cmc", "Comprehensive cover incl. parts"],
+                [
+                  "Repair",
+                  "/services/maintenance",
+                  "Breakdown visits & fault fixing",
+                ],
+                [
+                  "Modernization",
+                  "/services/modernization",
+                  "Upgrade old lifts",
+                ],
+              ].map(([t, href, d]) => (
+                <Link
+                  key={t}
+                  href={href}
+                  className="rounded-2xl border border-white/15 p-4 hover:border-copper"
+                >
+                  <p className="font-semibold">{t}</p>
+                  <p className="text-sm opacity-70">{d}</p>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <CallLink
+                source="service_section"
+                className="inline-flex items-center gap-2 rounded-full bg-copper px-6 py-3.5 font-semibold text-white"
+              >
+                Lift stuck or down? Call now
+              </CallLink>
+              <WhatsAppLink
+                source="service_section"
+                text="Hi Castle Elevator, I need service / AMC for an existing lift."
+                className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3.5 font-semibold"
+              />
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+            <Image
+              src="/images/editorial/lift-service.webp"
+              alt="Lift technician inspecting a passenger lift in a residential lobby"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Areas */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <p className="text-sm font-semibold uppercase tracking-wider text-copper">
+            Service areas
+          </p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+            Local teams across Delhi NCR
+          </h2>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {[
+              [
+                "Delhi",
+                "South, West, North & East Delhi, Dwarka, Rohini and nearby",
+              ],
+              [
+                "Gurugram (Gurgaon)",
+                "Golf Course Road, Sohna Road, DLF phases, New Gurugram sectors",
+              ],
+              ["Noida", "Noida sectors, Greater Noida and Noida Extension"],
+            ].map(([city, note]) => (
+              <div
+                key={city}
+                className="rounded-3xl border border-line bg-ivory p-6"
+              >
+                <h3 className="text-xl font-semibold">{city}</h3>
+                <p className="mt-2 text-sm text-muted">{note}</p>
+                <WhatsAppLink
+                  source="areas"
+                  text={`Hi Castle Elevator, I need a lift in ${city}. Please arrange a site survey.`}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-copper"
+                >
+                  Book a survey in {city.split(" ")[0]} <ArrowIcon />
+                </WhatsAppLink>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-ivory py-16 md:py-24">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="text-center text-3xl font-semibold tracking-tight md:text-4xl">
+            Questions buyers ask us
+          </h2>
+          <div className="mt-10 divide-y divide-line rounded-3xl border border-line bg-paper">
+            {FAQS.map((f) => (
+              <details key={f.q} className="group p-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
+                  {f.q}
+                  <span className="text-2xl text-copper transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-muted">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="rounded-[2rem] bg-copper px-6 py-12 text-center text-white md:px-12">
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+              Get your free site survey this week
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl opacity-90">
+              Tell us the building, floors and lift you have in mind. We&apos;ll
+              recommend the right lift and send a written quote.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <WhatsAppLink
+                source="final_cta"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 font-semibold text-[#14532d]"
+              />
+              <CallLink
+                source="final_cta"
+                className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-3.5 font-semibold"
+              />
+            </div>
           </div>
         </div>
       </section>

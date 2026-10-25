@@ -91,7 +91,7 @@ Total: 30 MINUTES = WEBSITE LIVE! 🎉
 ### Email Setup (Ready to go!)
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465
 Status: Verified ✅
 ```

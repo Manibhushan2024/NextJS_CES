@@ -15,7 +15,13 @@
 
 # next.js
 /.next/
+/CES_deployment/
+/github_deployment_ready/
 /out/
+.husky
+.dist
+.github
+.next
 
 # production
 /build
@@ -32,6 +38,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +46,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private business planning documents — never publish (public repo)
+/reports/
+/research_notes/
+
+# Local tooling
+/.claude/
+*.tsbuildinfo

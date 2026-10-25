@@ -55,7 +55,7 @@
 
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465
 Location: .env.local (secured)
 ```
@@ -285,7 +285,7 @@ User sees "Enquiry Received!" message
 ⚠️ **KEEP `.env.local` SECRET**
 - Don't share with anyone
 - Don't commit to Git (it's in .gitignore)
-- Keep password Loma@123 safe
+- Keep password [REDACTED — rotate exposed credential] safe
 - For production, add to Vercel/AWS environment
 
 ✅ **EVERYTHING IS READY**

@@ -1,4 +1,6 @@
 import { MetadataRoute } from "next"
+import { getProducts, getServices } from "@/lib/content"
+import { getAllPosts } from "@/lib/blog"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://castleelevator.com"
@@ -84,5 +86,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  return routes
+  // Generate detail URLs from real content; the old list included a missing
+  // freight page and omitted most products, service contracts and all blog posts.
+  return [
+    ...routes.filter(
+      (route) =>
+        !route.url.includes("/products/") && !route.url.includes("/services/")
+    ),
+    { url: `${baseUrl}/blog`, changeFrequency: "weekly", priority: 0.7 },
+    ...getProducts().map((product) => ({
+      url: `${baseUrl}/products/${product.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...getServices().map((service) => ({
+      url: `${baseUrl}/services/${service.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...getAllPosts().map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ]
 }

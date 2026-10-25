@@ -239,7 +239,7 @@ ENTIRE PROJECT: ✅ COMPLETE!
 ### Your Email
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 Provider: GoDaddy Titan
 SMTP: smtp.secureserver.net:465
 Status: ✅ Ready

@@ -107,7 +107,7 @@ castleelevator/
 ### Your GoDaddy Email Configuration
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP Host: smtp.secureserver.net
 SMTP Port: 465 (SSL)
 ```

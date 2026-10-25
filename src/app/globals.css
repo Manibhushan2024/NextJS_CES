@@ -1,25 +1,74 @@
 @import "tailwindcss";
 
+/* The ThemeProvider toggles html.dark, so dark: follows that class. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --ivory: #f8f5ef;
+  --paper: #ffffff;
+  --ink: #141820;
+  --muted: #5a6170;
+  --line: #e6dfd3;
+  --copper: #b0622f;
+  --copper-strong: #8e4a20;
+  --whatsapp: #1a9e4f;
+}
+
+.dark {
+  --ivory: #0e1115;
+  --paper: #161a21;
+  --ink: #f3f0ea;
+  --muted: #a5abb7;
+  --line: #2a3039;
+  --copper: #dd8d58;
+  --copper-strong: #f0a676;
+  --whatsapp: #25c165;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-copper: var(--copper);
+  --color-copper-strong: var(--copper-strong);
+  --color-whatsapp: var(--whatsapp);
+}
+
 @layer base {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    background-color: white;
-    color: #171717;
+    background-color: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
   }
 
-  html.dark body {
-    background-color: #050505;
-    color: rgb(229, 231, 235);
+  :focus-visible {
+    outline: 2px solid var(--copper);
+    outline-offset: 2px;
   }
 }
 
-/* Blob Animation */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Legacy pages still use these. */
 @keyframes blob {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -40,9 +89,4 @@
 
 .animation-delay-4000 {
   animation-delay: 4s;
-}
-
-/* Smooth transitions */
-* {
-  @apply transition-all duration-300;
 }

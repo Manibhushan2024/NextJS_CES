@@ -84,7 +84,7 @@ SMTP_HOST=smtp.secureserver.net
 SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=support@castelelevator.com
-SMTP_PASS=Loma@123
+SMTP_PASS=[REDACTED — rotate exposed credential]
 SMTP_FROM=support@castelelevator.com
 ```
 
@@ -213,7 +213,7 @@ npm install @sentry/nextjs
 ## 🚨 Important Security Notes
 
 1. **Never commit `.env.local`** - It's in `.gitignore`
-2. **Keep password safe** - Don't share Loma@123
+2. **Keep password safe** - Don't share [REDACTED — rotate exposed credential]
 3. **Production**: Use environment variables in hosting platform (Vercel, AWS, etc.)
 4. **SMTP Logs**: Monitor GoDaddy email delivery in their admin panel
 5. **Rate Limiting**: Currently in-memory (use Redis for production scaling)

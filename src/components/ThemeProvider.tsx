@@ -1,71 +1,73 @@
 "use client"
 
-import React, { createContext, useContext, useState, useEffect } from "react"
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useSyncExternalStore,
+} from "react"
 
 type Theme = "light" | "dark"
-
 interface ThemeContextType {
   theme: Theme
   toggleTheme: () => void
 }
-
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+let fallbackTheme: Theme | undefined
+
+function getTheme(): Theme {
+  try {
+    const stored = localStorage.getItem("theme")
+    if (stored === "light" || stored === "dark") return stored
+  } catch {
+    /* Theme toggling still works if storage is unavailable. */
+  }
+  return (
+    fallbackTheme ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light")
+  )
+}
+function subscribeTheme(onChange: () => void) {
+  const preference = window.matchMedia("(prefers-color-scheme: dark)")
+  window.addEventListener("storage", onChange)
+  window.addEventListener("castle-theme-change", onChange)
+  preference.addEventListener("change", onChange)
+  return () => {
+    window.removeEventListener("storage", onChange)
+    window.removeEventListener("castle-theme-change", onChange)
+    preference.removeEventListener("change", onChange)
+  }
+}
+function getServerTheme(): Theme {
+  return "light"
+}
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light")
-  const [mounted, setMounted] = useState(false)
-
-  // Initialize theme on mount
+  const theme = useSyncExternalStore(subscribeTheme, getTheme, getServerTheme)
   useEffect(() => {
-    setMounted(true)
-    
-    // Get stored theme or system preference
-    const stored = localStorage.getItem("theme") as Theme | null
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    const initialTheme = stored || (prefersDark ? "dark" : "light")
-    
-    setTheme(initialTheme)
-    applyTheme(initialTheme)
-  }, [])
-
-  const applyTheme = (newTheme: Theme) => {
-    const html = document.documentElement
-    if (newTheme === "dark") {
-      html.classList.add("dark")
-      html.style.colorScheme = "dark"
-    } else {
-      html.classList.remove("dark")
-      html.style.colorScheme = "light"
-    }
-    localStorage.setItem("theme", newTheme)
-  }
-
+    document.documentElement.classList.toggle("dark", theme === "dark")
+    document.documentElement.style.colorScheme = theme
+  }, [theme])
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    applyTheme(newTheme)
+    const next = theme === "light" ? "dark" : "light"
+    fallbackTheme = next
+    try {
+      localStorage.setItem("theme", next)
+    } catch {
+      /* Use in-memory fallback. */
+    }
+    window.dispatchEvent(new Event("castle-theme-change"))
   }
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return (
-      <ThemeContext.Provider value={{ theme: "light", toggleTheme: () => {} }}>
-        {children}
-      </ThemeContext.Provider>
-    )
-  }
-
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   )
 }
-
 export function useTheme(): ThemeContextType {
   const context = useContext(ThemeContext)
-  if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider")
-  }
+  if (!context) throw new Error("useTheme must be used within ThemeProvider")
   return context
 }

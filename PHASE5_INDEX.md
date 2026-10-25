@@ -270,7 +270,7 @@ END: Success! 🎉
 ### Your Email
 ```
 support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 ```
 
 ### Your Website

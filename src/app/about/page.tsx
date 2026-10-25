@@ -4,7 +4,7 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "About CastleElevator - Our Story & Mission",
   description:
-    "Learn about CastleElevator, our 10+ years of experience in elevator solutions and commitment to safety.",
+    "Learn about CastleElevator, lift installation, AMC and repair team serving Delhi, Gurugram and Noida.",
 }
 
 export default function About() {
@@ -27,18 +27,18 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                CastleElevator was founded with a simple mission: to provide
-                safe, reliable, and modern elevator solutions to buildings
-                across India.
+                Castle Elevator was founded with a simple mission: to provide
+                safe, reliable and modern lifts for homes and buildings in
+                Delhi, Gurugram and Noida.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Over 10 years, we have successfully installed and maintained
-                elevators in 500+ residential and commercial buildings, serving
-                millions of people daily.
+                Our team of 20–30 engineers, technicians and coordinators
+                surveys each site, installs partner equipment, and maintains
+                lifts through AMC and repair contracts.
               </p>
               <p className="text-gray-600 dark:text-gray-400">
-                Our team of certified engineers and technicians is dedicated to
-                delivering excellence in every project.
+                Every project starts with a free survey and a written quotation,
+                so you know exactly what you are getting before work begins.
               </p>
             </div>
             {/* 🖼️ UPDATED: Now using actual image instead of gradient */}
@@ -55,9 +55,9 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { number: "500+", label: "Buildings Served" },
-              { number: "10+", label: "Years Experience" },
-              { number: "50+", label: "Team Members" },
+              { number: "20–30", label: "Team members" },
+              { number: "9", label: "Lift types supplied" },
+              { number: "3", label: "Cities: Delhi, Gurugram, Noida" },
             ].map((stat, i) => (
               <div
                 key={i}

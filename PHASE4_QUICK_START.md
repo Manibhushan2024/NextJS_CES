@@ -94,7 +94,7 @@ serviceType: z.enum([
 ## ⚠️ Important Notes
 
 1. **`.env.local` is SECRET** - Never commit to GitHub
-2. **Never share password** - Loma@123 is for production only
+2. **Never share password** - [REDACTED — rotate exposed credential] is for production only
 3. **Check spam folder** - First email might go to spam
 4. **Test before launch** - Try 2-3 test submissions first
 
@@ -142,7 +142,7 @@ serviceType: z.enum([
    - SMTP_PORT=465
    - SMTP_SECURE=true
    - SMTP_USER=support@castelelevator.com
-   - SMTP_PASS=Loma@123
+   - SMTP_PASS=[REDACTED — rotate exposed credential]
    - SMTP_FROM=support@castelelevator.com
    - RATE_LIMIT_REQUESTS=5
    - RATE_LIMIT_WINDOW_MS=3600000

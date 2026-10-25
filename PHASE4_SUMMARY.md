@@ -39,7 +39,7 @@
 
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465
 Status: ✅ ACTIVE & CONFIGURED
 ```
@@ -245,7 +245,7 @@ After `npm install` and `npm run dev`:
 2. **Test Multiple Times** - Try different scenarios
 3. **Save Enquiry IDs** - Reference when replying
 4. **Monitor Emails** - GoDaddy shows delivery logs
-5. **Keep Password Safe** - Don't share Loma@123
+5. **Keep Password Safe** - Don't share [REDACTED — rotate exposed credential]
 
 ---
 

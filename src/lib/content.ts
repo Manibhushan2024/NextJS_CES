@@ -7,6 +7,8 @@ export interface Product {
   title: string
   shortDesc: string
   imagePath: string
+  category?: string
+  keySpecs?: string[]
   overview: string
   specifications: Record<string, string>
   features: string[]

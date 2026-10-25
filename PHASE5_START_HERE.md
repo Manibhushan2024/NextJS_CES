@@ -66,7 +66,7 @@
 - **Email Service**: GoDaddy SMTP configured
   - Endpoint: smtp.secureserver.net:465 (SSL)
   - Account: support@castelelevator.com
-  - Password: Loma@123
+  - Password: [REDACTED — rotate exposed credential]
   - Status: Verified and ready
   
 - **Form Validation**: Zod schemas
@@ -137,7 +137,7 @@
   - SMTP_PORT=465
   - SMTP_SECURE=true
   - SMTP_USER=support@castelelevator.com
-  - SMTP_PASS=Loma@123
+  - SMTP_PASS=[REDACTED — rotate exposed credential]
   - SMTP_FROM=support@castelelevator.com
   - RATE_LIMIT_REQUESTS=5
   - RATE_LIMIT_WINDOW_MS=3600000
@@ -396,7 +396,7 @@ User → Browser → Vercel CDN → Next.js Server → GoDaddy Email
 ### GoDaddy Email
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 Provider: GoDaddy Titan
 SMTP: smtp.secureserver.net:465 (SSL)
 Status: Ready ✅

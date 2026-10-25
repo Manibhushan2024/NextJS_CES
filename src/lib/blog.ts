@@ -1,5 +1,3 @@
-"use server"
-
 import fs from "fs"
 import path from "path"
 
@@ -61,10 +59,7 @@ export function getCategories(): string[] {
   return Array.from(categories).sort()
 }
 
-export function getRelatedPosts(
-  slug: string,
-  limit: number = 3
-): BlogPost[] {
+export function getRelatedPosts(slug: string, limit: number = 3): BlogPost[] {
   const currentPost = getPostBySlug(slug)
   if (!currentPost) return []
 

@@ -28,5 +28,10 @@ yarn-error.log*
 .env.*
 .env.local
 .env.development
+CES_deployment/
+github_deployment_ready/
+.dist/
+research_notes/
+reports/
 *.log
 *.md

@@ -55,7 +55,7 @@
       },
       {
         "q": "What if there is an emergency?",
-        "a": "Our 24/7 emergency hotline ensures we reach you within 30 minutes in most areas."
+        "a": "Call our breakdown line. We guide you on the phone and dispatch a technician as quickly as the location and traffic allow; response targets for AMC customers are written into the contract."
       }
     ]
   },
@@ -96,10 +96,26 @@
     "overview": "Our Annual Maintenance Contract (AMC) is a comprehensive service plan designed to keep your elevators running smoothly 365 days a year. With monthly scheduled visits by certified technicians, preventive maintenance, and 24/7 emergency support, AMC ensures maximum uptime, safety compliance, and peace of mind. The contract includes spare parts coverage, detailed reporting, and priority response times - all at a predictable annual cost that helps you budget effectively while protecting your elevator investment.",
     "imagePath": "/images/services/amc.png",
     "highlights": [
-      { "icon": "📅", "title": "12 Monthly Visits", "desc": "Scheduled preventive maintenance every month" },
-      { "icon": "🔧", "title": "Parts Included", "desc": "Spare parts covered up to contract limit" },
-      { "icon": "📞", "title": "24/7 Support", "desc": "Emergency hotline available anytime" },
-      { "icon": "📊", "title": "Detailed Reports", "desc": "Quarterly performance & health reports" }
+      {
+        "icon": "📅",
+        "title": "12 Monthly Visits",
+        "desc": "Scheduled preventive maintenance every month"
+      },
+      {
+        "icon": "🔧",
+        "title": "Parts Included",
+        "desc": "Spare parts covered up to contract limit"
+      },
+      {
+        "icon": "📞",
+        "title": "24/7 Support",
+        "desc": "Emergency hotline available anytime"
+      },
+      {
+        "icon": "📊",
+        "title": "Detailed Reports",
+        "desc": "Quarterly performance & health reports"
+      }
     ],
     "inclusions": [
       "12 scheduled maintenance visits (monthly)",
@@ -145,14 +161,30 @@
     "overview": "Our Corrective Maintenance Contract (CMC) provides rapid-response repair services when your elevator needs urgent attention. Unlike preventive contracts, CMC focuses on fixing problems as they occur with guaranteed response times of under 2 hours. Our expert technicians are available 24/7 to diagnose issues, perform repairs, and get your elevator back in service quickly. CMC is ideal for buildings that prefer pay-as-you-go maintenance with the security of priority response and competitive repair rates.",
     "imagePath": "/images/services/cmc.png",
     "highlights": [
-      { "icon": "⚡", "title": "2-Hour Response", "desc": "Rapid technician dispatch guaranteed" },
-      { "icon": "🚨", "title": "24/7 Emergency", "desc": "Round-the-clock support available" },
-      { "icon": "🔍", "title": "Expert Diagnosis", "desc": "Complete troubleshooting & analysis" },
-      { "icon": "✅", "title": "Quality Repairs", "desc": "Certified parts & skilled technicians" }
+      {
+        "icon": "⚡",
+        "title": "2-Hour Response",
+        "desc": "Rapid technician dispatch guaranteed"
+      },
+      {
+        "icon": "🚨",
+        "title": "24/7 Emergency",
+        "desc": "Round-the-clock support available"
+      },
+      {
+        "icon": "🔍",
+        "title": "Expert Diagnosis",
+        "desc": "Complete troubleshooting & analysis"
+      },
+      {
+        "icon": "✅",
+        "title": "Quality Repairs",
+        "desc": "Certified parts & skilled technicians"
+      }
     ],
     "inclusions": [
       "Emergency breakdown repairs",
-      "Rapid response service (within 2 hours)",
+      "Priority breakdown response for contract customers",
       "Complete diagnostics and troubleshooting",
       "Spare parts and labor for repairs",
       "Post-repair testing and certification",
@@ -163,7 +195,7 @@
     "processSteps": [
       "Customer calls emergency hotline",
       "Immediate remote diagnostics by phone",
-      "Rapid technician dispatch (within 2 hours)",
+      "Priority technician dispatch",
       "On-site repair execution",
       "Complete system testing after repair",
       "Documentation and follow-up support"
@@ -175,7 +207,7 @@
       },
       {
         "q": "How fast is the response?",
-        "a": "Our emergency team responds within 2 hours in most areas. For critical situations, we provide immediate phone support and guidance."
+        "a": "Contract customers get priority breakdown response, with response targets written into the contract. For critical situations, we provide immediate phone support and guidance."
       },
       {
         "q": "What if an elevator breaks down outside working hours?",

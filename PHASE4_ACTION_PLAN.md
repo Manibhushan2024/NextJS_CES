@@ -111,7 +111,7 @@ SMTP_HOST=smtp.secureserver.net
 SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=support@castelelevator.com
-SMTP_PASS=Loma@123
+SMTP_PASS=[REDACTED — rotate exposed credential]
 SMTP_FROM=support@castelelevator.com
 RATE_LIMIT_REQUESTS=5
 RATE_LIMIT_WINDOW_MS=3600000
@@ -133,7 +133,7 @@ RATE_LIMIT_WINDOW_MS=3600000
 
 ```
 Email: support@castelelevator.com
-Password: Loma@123
+Password: [REDACTED — rotate exposed credential]
 SMTP: smtp.secureserver.net:465 (SSL)
 Already configured in: .env.local
 ```
@@ -264,7 +264,7 @@ If you need help, read:
 ## 🔐 Security Notes
 
 ✅ `.env.local` is SECRET - never commit to Git  
-✅ Password (Loma@123) only in `.env` files  
+✅ Password ([REDACTED — rotate exposed credential]) only in `.env` files  
 ✅ Production uses Vercel's secure environment  
 ✅ Rate limiting prevents abuse  
 ✅ Input validation prevents attacks  
@@ -299,7 +299,7 @@ npm install → npm run dev → Test → Deploy → LIVE! 🚀
 | Item | Value |
 |------|-------|
 | Admin Email | support@castelelevator.com |
-| Password | Loma@123 |
+| Password | [REDACTED — rotate exposed credential] |
 | SMTP Host | smtp.secureserver.net |
 | Port | 465 (SSL) |
 | Contact Phone | +91 8285266082 |

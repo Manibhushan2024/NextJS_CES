@@ -211,7 +211,7 @@ vercel
    SMTP_PORT=465
    SMTP_SECURE=true
    SMTP_USER=support@castelelevator.com
-   SMTP_PASS=Loma@123
+   SMTP_PASS=[REDACTED — rotate exposed credential]
    SMTP_FROM=support@castelelevator.com
    RATE_LIMIT_REQUESTS=5
    RATE_LIMIT_WINDOW_MS=3600000
